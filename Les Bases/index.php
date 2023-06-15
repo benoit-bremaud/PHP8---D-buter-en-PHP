@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World !!</h1>
+    <?php # balise d'ouverture du code php
+        echo "<h1>Hello World !!</h1>"; # permet d'afficher du texte en code php attention on finit toujours par ";"
+    ?> <!-- balise de fermeture du code php-->
 </body>
 </html>
