@@ -26,6 +26,11 @@
         $resultat = $nombre1 / $nombre2;
         var_dump($resultat);
 
+        // Calcul "complexe"
+        // La priorité des calculs est respectée
+        $resultat = $nombre1 + $nombre2 / 5;
+        var_dump($resultat);
+
     ?>    
 </body>
 </html>
