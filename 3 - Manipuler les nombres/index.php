@@ -7,7 +7,24 @@
 </head>
 <body>
     <?php
-    
+        $nombre1 = 14;
+        $nombre2 = 85;
+
+        // Addition
+        $resultat = $nombre1 + $nombre2;
+        var_dump($resultat);
+
+        // Soustraction
+        $resultat = $nombre1 - $nombre2;
+        var_dump($resultat);
+
+        // Multiplication
+        $resultat = $nombre1 * $nombre2;
+        var_dump($resultat);
+
+        // Divicion
+        $resultat = $nombre1 / $nombre2;
+        var_dump($resultat);
 
     ?>    
 </body>
