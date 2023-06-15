@@ -44,6 +44,12 @@
 
         echo "<p>$booleen</p>";
 
+        // connaitre le contenu et le type d'une variable
+        // très utile pour le débugage
+        var_dump($nombre);
+        var_dump($nombre2);
+        var_dump($chaine);
+        var_dump($booleen);
 
     ?>
 </body>
