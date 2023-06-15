@@ -10,7 +10,7 @@
         function additionner($nb1, $nb2){
             echo $nb1 + $nb2;
         }
-        function saluer($salutation, $prenom, $nom){
+        function saluer($prenom, $nom, $salutation = "Hello"){
             echo "$salutation $prenom $nom";
         }
 
@@ -21,6 +21,9 @@
     <p><?php  additionner(30, 25); ?></p> 
     
     <h1><?php saluer("Salut", "Benoit", "Bremaud") ?></h1>
+
+    <h1><?php saluer(prenom: "Benoit", nom: "Bremaud") ?></h1>
+
 
 </body>
 </html>
