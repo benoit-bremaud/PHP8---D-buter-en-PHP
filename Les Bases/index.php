@@ -20,9 +20,30 @@
 
         echo $nomPersonne;
 
-        echo "<h1>Bonjour $nomPersonne</h1>";
+        echo "<h1>Bonjour $nomPersonne, comment ça va ?</h1>";
         
         echo "<p>Bonjour Benoit</p>";
+
+        // Les types de variables
+        // Entiers
+        $nombre = 85;
+        // affichage d'un nom entier via une variable
+        echo "<p>$nombre</p>";
+
+        // Décimaux (float)
+        $nombre2 = 85.2;
+        echo "<p>$nombre2</p>";
+
+        // chaine de caractères (string)
+        $chaine = "Ceci est un texte";
+        echo "<p>$chaine</p>";
+
+        // Booléen (boolean)
+        // permet de savoir si quelque est vrai ou faux, allumer ou éteint
+        $booleen = true; // ou false
+
+        echo "<p>$booleen</p>";
+
 
     ?>
 </body>
