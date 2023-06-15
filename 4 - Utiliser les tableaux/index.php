@@ -57,7 +57,56 @@
     $valeur = array_shift($tableau);
     var_dump($tableau);
     echo "<p>$valeur</p>";
-    
+
+    // Diviser le tableau en plusieurs parties de 2 valeurs
+    $tableau2 = array_chunk($tableau, 2);
+
+    var_dump($tableau2);
+
+    $tableau2 = array_chunk($tableau, 2, true);
+
+    var_dump($tableau2);
+
+    // Mélanger un tableau
+    shuffle($tableau);
+
+    var_dump($tableau);
+
+    // Tableaux associatifs
+    $tableauassoc = [
+        "nom" => "Bremaud",
+        "prenom" => "Benoit",
+        "age" => 42
+    ];
+
+    var_dump($tableauassoc);
+
+    var_dump($tableauassoc["nom"]);
+
+    var_dump($tableauassoc["prenom"]);
+
+    // Tableaux multidimensionnels
+    // Tableaux a l'intérieur de tableaux
+    $tableaumulti = [
+        0 => [
+            "nom" => "Bremaud",
+            "prenom" => "Benoit",
+            "age" => 42
+        ],
+        1 => [
+            "nom" => "Berniere",
+            "prenom" => "Aline",
+            "age" => 42
+        ]
+
+    ];
+
+    var_dump($tableaumulti);
+
+    var_dump($tableaumulti[0]["nom"]); # retourne "nom" de l'index "0"
+
+    var_dump($tableaumulti[1]["prenom"]); # retourne "prenom" de l'index "1"
+
     echo "</pre>"; # permet de mettre en forme les "var_dump"
     ?>    
 </body>
