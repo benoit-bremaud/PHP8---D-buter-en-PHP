@@ -20,7 +20,7 @@
     require_once "includes/connect.php";
 
     // Déclaration de variables pour la requete sql
-    $username = "demo";
+    $username = "admin'; --";
     $password = "wxcvbn";
 
     // Requete qui donne les détails de l'utilisateur qui cherche à se connecter
