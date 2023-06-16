@@ -61,19 +61,24 @@
                 VALUES ('demo@nouvelle-techno.fr', 'azerty', '[\"ROLE_USER\"]')";
         
         $requete = $db->query($sql);
+        $requete = $db->query($sql);
+        $requete = $db->query($sql);
+        $requete = $db->query($sql);
+        $requete = $db->query($sql);
 
         // Modifier un utilisateur
-        $sql = "UPDATE `users` SET `password` = 'qsdfgh'
+        $sql = "UPDATE `users` SET `pass` = 'qsdfgh'
                 WHERE `id` = 0";
 
         $requete = $db->query($sql);
 
-         // Supprimer un utilisateur
-         $sql = "DELETE FROM `users` WHERE `id` > 3";
+        // Supprimer un utilisateur
+        $sql = "DELETE FROM `users` WHERE `id` > 3";
 
         $requete = $db->query($sql);
 
-        // 
+        // Savoir combien de lignes ont été supprimées
+        echo $requete->rowCount();
 
     ?>    
 </body>
