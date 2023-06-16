@@ -7,6 +7,16 @@
 </head>
 <body>
     <?php
+        // On pose une question
+        $reponse = true;
+        // Si la réponse est vrai
+        if ($reponse) {
+            // Alors affiche "Bravo
+            echo "Bravo";
+        } else {
+            // Sinon affiche "Puni"
+            echo "puni";
+        }
         
     ?>
     
