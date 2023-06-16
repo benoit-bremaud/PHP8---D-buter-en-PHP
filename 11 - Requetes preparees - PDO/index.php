@@ -20,18 +20,18 @@
     require_once "includes/connect.php";
 
     // Déclaration de variables pour la requete sql
-    $username = "admin'; --";
+    $username = "demo";
     $password = "wxcvbn";
 
     // Requete qui donne les détails de l'utilisateur qui cherche à se connecter
-    $sql = "SELECT * FROM `users` WHERE `username` = ? AND `pass` = ?";
+    $sql = "SELECT * FROM `users` WHERE `username` =:username AND `pass` =:pass"; # avec paramètres sql
 
     // On prépare la requête
     $requete = $db->prepare($sql);
 
     // On injecte les valeurs avec "bindValue" fonction de PDO
-    $requete->bindValue(1, $username, PDO::PARAM_STR); # 1 pour le premier ? dans la requete
-    $requete->bindValue(2, $password, PDO::PARAM_STR); # 2 pour le deuxieme ? dans la requete
+    $requete->bindValue(":username", $username, PDO::PARAM_STR); # avec paramètre sql
+    $requete->bindValue(":pass", $password, PDO::PARAM_STR); # et peut importe l'ordre contrairement à ?
 
     // On exécute
     $requete->execute();
