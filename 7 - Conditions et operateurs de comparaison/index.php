@@ -30,6 +30,8 @@
         // > : supérieur à
         // <= : inférieur ou égal à
         // >= : supérieur ou égal à
+        // != : différent de (en valeur)
+        // !== : Strictement différent de (en valeur ET en type)
         if ($variable == 17) {
             // Alors
             echo "Egal";
@@ -38,6 +40,50 @@
             echo "Différent";
         }
         
+    ?></p>
+    <!-- Exemple 3 -->
+    <p><?php
+    // On pose un question
+    $a = 17;
+    $b = 21;
+    // Avec opérateur combiné
+    echo "<p>". ($a <=> $b) ."</p>";
+    /*
+    < -> -1 si a < b
+    = -> 0 si a = b
+    > -> 1 si a > b
+    */
+    // On peut le faire aussi avec une autre instruction qui s'appelle "switch"
+    $animal = "Chat";
+
+    switch($animal){
+        case 'Chat':
+            echo "Félin";
+            break;
+        case 'Poisson rouge':
+            echo "Poisson";
+            break;
+        case 'Perroquet':
+            echo "Oiseau";
+            break;
+    }
+    ?></p>
+    <p><?php
+    // Opérateur combiné < = >
+    // Combine les trois comparaison
+    switch($a <=> $b){
+        case -1:
+            echo "a plus petit que b";
+            break;
+        case 0:
+            echo "a égale b";
+            break;
+        case 1:
+            echo "a plus grand que b";
+            break;
+    }
+
+
     ?></p>
     
 </body>
