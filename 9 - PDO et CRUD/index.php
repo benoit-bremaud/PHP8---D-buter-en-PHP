@@ -56,6 +56,12 @@
         var_dump($user);
         echo "</pre>";
 
+        // Ajouter un utilisateur
+        $sql = "INSERT INTO `users`(`email`, `pass`, `roles`)
+                VALUES ('demo@nouvelle-techno.fr', 'azerty', '[\"ROLE_USER\"]')";
+        
+        $requete = $db->query($sql);
+
     ?>    
 </body>
 </html>
