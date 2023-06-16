@@ -62,6 +62,12 @@
         
         $requete = $db->query($sql);
 
+        // Modifier un utilisateur
+        $sql = "UPDATE `users` SET `password` = 'qsdfgh'
+                WHERE `id` = 0";
+
+        $requete = $db->query($sql);
+
     ?>    
 </body>
 </html>
