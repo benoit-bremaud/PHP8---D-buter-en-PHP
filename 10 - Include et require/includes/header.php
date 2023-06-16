@@ -3,6 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INCLUDE et REQUIRE</title>
+    <title><?= $titre ?? "Accueil" ?></title> <!-- titre dynamique en fonction de la page active-->
 </head>
 <body>
