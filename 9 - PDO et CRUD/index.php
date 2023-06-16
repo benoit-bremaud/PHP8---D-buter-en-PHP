@@ -68,6 +68,13 @@
 
         $requete = $db->query($sql);
 
+         // Supprimer un utilisateur
+         $sql = "DELETE FROM `users` WHERE `id` > 3";
+
+        $requete = $db->query($sql);
+
+        // 
+
     ?>    
 </body>
 </html>
