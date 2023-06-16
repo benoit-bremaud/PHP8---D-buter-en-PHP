@@ -1,26 +1,24 @@
-<!-- <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INCLUDE et REQUIRE</title>
-</head>
-<body> -->
-    <!-- <nav>
-        <h1>Titre</h1>
-        <ul>
-            <li>Accueil</li>
-            <li>Contact</li>
-        </ul>
-    </nav> -->
-    <?php
-    // Diviser le code
+<?php
+    // On inclut le fichier functions.php
+    require_once "includes/functions.php"; # Arrête le code si le fichier n'éxiste pas
 
-    ?>
-    <!-- <footer>
-        <p>&copy: 2023</p>
-    </footer>
+    // On définit le titre de la page
+    $titre = "Accueil";
 
-    
-</body>
-</html> -->
+    // On inclue le header
+    include "includes/header.php";
+
+    // On inclue la navbar
+    include_once "includes/navbar.php";
+
+    // On écrit le contenu de la page
+?>
+
+<p>Contenu de la page d'accueil</p>
+
+<?php
+    verifForm();
+    // On inclue le footer
+    include "includes/footer.php";
+
+?>
