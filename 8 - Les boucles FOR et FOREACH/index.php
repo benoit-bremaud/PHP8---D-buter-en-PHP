@@ -19,6 +19,33 @@
         for ($nombre = 100; $nombre >= 0; $nombre -= 5) { 
             echo "<p>$nombre</p>";
         }
+        $clients = [
+            "ref1" => [
+                "nom" => "Bremaud",
+                "prenom" => "Benoit"
+            ],
+            "ref2" => [
+                "nom" => "César",
+                "prenom" => "Jules"
+            ]
+        ];
+
+        var_dump($clients);
+
+        // Fonction pour pourcourir les tableaux
+        foreach ($clients as $client) {
+            // var_dump($client);
+            echo "<p>{$client["nom"]} {$client["prenom"]}</p>";
+        }
+
+         // Fonction pour pourcourir les tableaux avec référence associative
+         foreach ($clients as $ref => $client) {
+            // var_dump($client);
+            echo "<p>Référence client : $ref</p>";
+            echo "<p>{$client["nom"]} {$client["prenom"]}</p>";
+        }
+
+
     ?>    
 </body>
 </html>
