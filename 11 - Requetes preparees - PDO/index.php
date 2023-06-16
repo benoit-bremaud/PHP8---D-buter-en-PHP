@@ -19,8 +19,12 @@
 <?php
     require_once "includes/connect.php";
 
+    // Déclaration de variables pour la requete sql
+    $username = "demo";
+    $password = "wxcvbn";
+
     // Requete qui donne les détails de l'utilisateur qui cherche à se connecter
-    $sql = "SELECT * FROM `users` WHERE `username` = 'demo' AND `pass` = 'wxcvbn'";
+    $sql = "SELECT * FROM `users` WHERE `username` = '$username' AND `pass` = '$password'";
     $requete = $db->query($sql);
     $user = $requete->fetchAll();
 
