@@ -32,9 +32,9 @@ include "includes/navbar.php";
 <section>
 <?php foreach($articles as $article): ?>
     <article>
-        <h1><?= $article["title"] ?></h1> <!--?= ça fait un "echo"-->
+        <h1><?= strip_tags($article["title"]) ?></h1> <!--?= ça fait un "echo"-->
         <p>Publié le <?= $article["created_at"] ?></p>
-        <div><?= $article["content"] ?></div>
+        <div><?= strip_tags($article["content"]) ?></div> <!-- strip_tags() permet de protèger les données contre des failles de codage-->
     </article>    
 <?php endforeach; ?>
 </section>
