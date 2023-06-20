@@ -9,9 +9,9 @@
     // On écrit le contenu de la page
 ?>
 
-<h1>Profil de <?= $_SESSION["user"]["pseudo"] ?></h1>
+<h1>Profil de <?= $_SESSION["user"]["identifiant"] ?></h1>
 
-<p>Pseudo : <?= $_SESSION["user"]["pseudo"] ?></p>
+<p>identifiant : <?= $_SESSION["user"]["identifiant"] ?></p>
 <p>Email : <?= $_SESSION["user"]["email"] ?></p>
 
 <?php
