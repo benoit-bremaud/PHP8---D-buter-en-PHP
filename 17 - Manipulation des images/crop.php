@@ -45,7 +45,7 @@ switch ($infos["mime"]) {
         imagejpeg($nouvelleImage, __DIR__ . "/uploads/crop-" . $fichier);
         break;
 
-}
+};
 
 // On détruit les images dans la mémoire
 imagedestroy($nouvelleImage);
