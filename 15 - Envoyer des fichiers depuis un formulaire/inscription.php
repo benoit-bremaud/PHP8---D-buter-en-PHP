@@ -10,13 +10,13 @@ if (!empty($_POST)) {
     // var_dump($_POST); vérification des valeurs depuis le formulaire
     // Le formulaire a été envoyé
     // On vérifie que TOUS les champs requis sont remplis
-    if (isset($_POST["nickname"], $_POST["email"], $_POST["pass"])
-        && !empty($_POST["nickname"]) && !empty($_POST["email"]) &&
+    if (isset($_POST["username"], $_POST["email"], $_POST["pass"])
+        && !empty($_POST["username"]) && !empty($_POST["email"]) &&
         !empty($_POST["pass"])    
     ){
         // Le formulaire est complet
         // On réqupère les donnéesen les protégeant (failles XSS)
-        $pseudo = strip_tags($_POST["nickname"]); # Enlève toutes les balises qui pourrait éventuellement être dedans
+        $identifiant = strip_tags($_POST["username"]); # Enlève toutes les balises qui pourrait éventuellement être dedans
         
         // On vérifie que l'email est vraiment un email
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
@@ -34,13 +34,13 @@ if (!empty($_POST)) {
         require_once "includes/connect.php";
 
         $sql = "INSERT INTO `users`(`username`, `email`, `pass`, `roles`) VALUES 
-        (:pseudo, :email, '$pass', '[\"ROLE_USER\"]')";
+        (:identifiant, :email, '$pass', '[\"ROLE_USER\"]')";
 
         // On prépare la requête
         $query = $db->prepare($sql);
 
         // On injecte les valeurs
-        $query->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
+        $query->bindValue(":identifiant", $identifiant, PDO::PARAM_STR);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
 
         // On exécute la requête
@@ -54,7 +54,7 @@ if (!empty($_POST)) {
         // On stocke dans $_SESSION les informations de l'utilisateur
         $_SESSION["user"] = [
             "id" => $id,
-            "pseudo" => $pseudo,
+            "identifiant" => $identifiant,
             "email" => $_POST["email"],
             "roles" => ["ROLE_USER"]
         ];
@@ -82,8 +82,8 @@ if (!empty($_POST)) {
 <!-- Un formulaire en méthode POST -->
 <form method="post">
     <div>
-        <label for="pseudo">Pseudo</label>
-        <input type="text" name="nickname" id="pseudo">
+        <label for="identifiant">identifiant</label>
+        <input type="text" name="username" id="identifiant">
     </div>
     <div>
         <label for="email">Email</label>
